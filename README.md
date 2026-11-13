@@ -1,9 +1,9 @@
-# Tova Designs website
+# Tova Digital website
 
 A simple, fast static website: plain HTML, CSS and a little JavaScript. No build step, no frameworks: upload the folder and it works.
 
 ```
-tova-designs/
+tova-digital/
 ├── index.html          Home
 ├── about.html          About
 ├── case-studies.html   Case studies (with working filters)
@@ -21,18 +21,18 @@ Double-click `index.html` to open it in your browser. Everything except the cont
 
 ## Put it on GitHub
 
-1. Create a new repository on github.com (for example `tova-designs`).
+1. Create a new repository on github.com (for example `tova-digital`).
 2. Click **Add file → Upload files**, drag in everything inside this folder (not the folder itself), and click **Commit changes**.
 
 Or from a terminal:
 
 ```bash
-cd tova-designs
+cd tova-digital
 git init
 git add .
-git commit -m "Tova Designs website"
+git commit -m "Tova Digital website"
 git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/tova-designs.git
+git remote add origin https://github.com/YOUR-USERNAME/tova-digital.git
 git push -u origin main
 ```
 
@@ -44,7 +44,7 @@ Any of these are free for a site like this:
 - **Cloudflare Pages**: same idea; leave the build command empty and the output directory as `/`.
 - **GitHub Pages**: in the repo, Settings → Pages → Deploy from branch → `main` / root.
 
-Then connect your domain (e.g. `tovadesigns.co.nz`) in your host's domain settings.
+Then connect your domain (e.g. `tovadigital.co.nz`) in your host's domain settings.
 
 ## Make the contact form send emails
 

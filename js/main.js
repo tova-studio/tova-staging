@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Tova Designs — site behaviour
+   Tova Digital — site behaviour
    1. Mobile menu
    2. Footer year
    3. Gentle reveal on scroll
@@ -115,7 +115,7 @@
 
       var action = form.getAttribute('action') || '';
       if (action.indexOf('YOUR_FORM_ID') !== -1) {
-        console.warn('Tova Designs: the contact form is not connected yet. Add your Formspree form ID in contact.html.');
+        console.warn('Tova Digital: the contact form is not connected yet. Add your Formspree form ID in contact.html.');
         showSuccess();
         return;
       }
