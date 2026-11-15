@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tovadigital.co.nz/sitemap.xml
