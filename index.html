@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@100;200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/effects.css">
   <script>document.documentElement.classList.add('js');</script>
 <link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Tova"><meta name="theme-color" content="#F6EEDF"><link rel="canonical" href="https://tovadigital.co.nz/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tova Digital"><meta name="twitter:description" content="Good work, made in the light. Websites, brands and digital growth from Ōtautahi Christchurch."><meta name="twitter:image" content="https://tovadigital.co.nz/images/hero-sumner.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Tova Digital","url":"https://tovadigital.co.nz/","description":"Tova Digital is a Christchurch design and technology studio crafting beautiful websites, brands and digital marketing for New Zealand businesses.","email":"enquiries@tovadigital.co.nz","telephone":"+64223680811","address":{"@type":"PostalAddress","addressLocality":"Christchurch","addressCountry":"NZ"},"areaServed":{"@type":"Country","name":"New Zealand"},"image":"https://tovadigital.co.nz/icon-512.png","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Experience & Design"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Technology & Development"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Marketing & Growth"}}],"founder":[{"@type":"Person","name":"Lily Barnett","jobTitle":"Co-founder","image":"https://tovadigital.co.nz/images/lily-barnett-blue.jpg"},{"@type":"Person","name":"Hushdon Tohovaka","jobTitle":"Co-founder","image":"https://tovadigital.co.nz/images/hushdon-tohovaka-blue.jpg"}]}</script></head>
 <body>
@@ -44,21 +45,24 @@
 
   <main id="main">
 
-    <section class="wrap hero stack center">
-      <p class="eyebrow">Websites · Brands · Digital growth</p>
-      <h1 class="display">Good work, made in the light.</h1>
-      <p class="lead">A Christchurch design and technology studio, crafting beautiful websites and quietly powerful marketing for businesses that want to look as good as they are.</p>
-      <div class="actions">
-        <a class="btn" href="contact.html">Start a project</a>
-        <a class="text-link" href="case-studies.html">View our work</a>
-      </div>
-    </section>
+    <div class="hero-sand" data-hero-sand>
+      <canvas class="hero-sand__canvas" aria-hidden="true"></canvas>
+      <section class="wrap hero stack center">
+        <p class="eyebrow">Websites · Brands · Digital growth</p>
+        <h1 class="display">Good work, made in the light.</h1>
+        <p class="lead">A Christchurch design and technology studio, crafting beautiful websites and quietly powerful marketing for businesses that want to look as good as they are.</p>
+        <div class="actions">
+          <a class="btn" href="contact.html">Start a project</a>
+          <a class="text-link" href="case-studies.html">View our work</a>
+        </div>
+      </section>
 
-    <div class="wrap">
-      <figure class="figure reveal">
-        <img class="photo photo--hero" src="images/hero-sumner.jpg" alt="Turquoise waves rolling onto the sandy shore at Sumner, Christchurch, with a rocky outcrop, the estuary and distant mountains beyond" width="1800" height="1200">
-        <figcaption class="figure__caption">Sumner Beach, Ōtautahi Christchurch</figcaption>
-      </figure>
+      <div class="wrap">
+        <figure class="figure reveal">
+          <img class="photo photo--hero" src="images/hero-sumner.jpg" alt="Turquoise waves rolling onto the sandy shore at Sumner, Christchurch, with a rocky outcrop, the estuary and distant mountains beyond" width="1800" height="1200">
+          <figcaption class="figure__caption">Sumner Beach, Ōtautahi Christchurch</figcaption>
+        </figure>
+      </div>
     </div>
 
     <section class="wrap section">
@@ -143,9 +147,13 @@
       </div>
     </section>
 
-    <section class="section section--bay">
+    <section class="section section--bay beam-scene" data-beam-scene>
+      <span class="beam__ray" aria-hidden="true"></span>
       <div class="wrap grid feature">
-        <img class="photo reveal" src="images/lighthouse-akaroa.jpg" alt="The white wooden Akaroa lighthouse with its red base, overlooking the harbour and green hills of Banks Peninsula" style="max-width: 460px; height: 520px; object-position: 34% 50%" loading="lazy">
+        <div class="beam-photo reveal">
+          <img class="photo" src="images/lighthouse-akaroa.jpg" alt="The white wooden Akaroa lighthouse with its red base, overlooking the harbour and green hills of Banks Peninsula" width="460" height="520" loading="lazy">
+          <span class="beam__lamp" data-beam-lamp aria-hidden="true"></span>
+        </div>
         <div class="stack reveal">
           <p class="eyebrow">Our name</p>
           <blockquote>Like light on water — clear, calm and full of life.</blockquote>
@@ -220,8 +228,8 @@
       <p class="small muted" style="max-width: 520px">Prices exclude GST. We quote every project individually, so you know the full cost before we begin. <a href="faq.html">Read the questions we're asked most</a>.</p>
     </section>
 
-    <section class="cta-photo">
-      <img src="images/hero-sumner.jpg" alt="Turquoise waves rolling onto the sandy shore at Sumner, Christchurch, with a rocky outcrop, the estuary and distant mountains beyond" loading="lazy">
+    <section class="cta-sand" data-sand>
+      <canvas class="sand__canvas" aria-hidden="true"></canvas>
       <div class="cta-photo__inner">
         <div class="cta-card reveal">
           <h2 class="h2">Let's begin something good.</h2>
@@ -276,5 +284,6 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+  <script src="js/effects.js" defer></script>
 </body>
 </html>

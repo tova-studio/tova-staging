@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Interactive effects: sand that parts around the pointer, and a lighthouse beam.
+   Both are decoration only. They switch off for people who ask for reduced motion.
+   ========================================================================== */
+
+/* ---------- Sand (closing banner) ---------- */
+.cta-sand {
+  position: relative; overflow: hidden; isolation: isolate;
+  background:
+    repeating-linear-gradient(173deg, rgba(122, 99, 67, 0.035) 0 1px, transparent 1px 19px),
+    radial-gradient(120% 140% at 30% 0%, #F0E6D2 0%, #E6D8BD 45%, #D9C6A5 100%);
+}
+.cta-sand .sand__canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.cta-sand .cta-photo__inner { z-index: 1; }
+.cta-sand .cta-card { background: rgba(251, 248, 242, 0.92); }
+
+/* ---------- A light layer of gold dust over the whole page (decoration only, never blocks a click) ---------- */
+.page-sand { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 40; pointer-events: none; }
+
+/* ---------- Home banner: gold dust around the main picture ---------- */
+.hero-sand { position: relative; isolation: isolate; padding-bottom: 56px; }
+.hero-sand .hero-sand__canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; }
+
+/* ---------- Lighthouse beam (the "Our name" section) ---------- */
+.beam-scene {
+  position: relative; overflow: hidden; isolation: isolate;
+  background: radial-gradient(130% 100% at 18% 22%, #36484f 0%, #27343b 58%, #1e2930 100%);
+  color: var(--cream);
+}
+.beam-scene .wrap { position: relative; z-index: 1; }
+.beam-scene blockquote, .beam-scene p, .beam-scene em { color: var(--cream); }
+.beam-scene.section--bay .eyebrow { color: var(--sand); }
+.beam-photo { position: relative; width: 100%; max-width: 460px; }
+.beam-photo .photo { display: block; width: 100%; height: 520px; object-fit: cover; object-position: 34% 50%; }
+.beam__lamp {
+  position: absolute; left: 34%; top: 19.5%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 246, 214, 0.95) 0%, rgba(255, 232, 160, 0.55) 40%, rgba(255, 232, 160, 0) 72%);
+  animation: lamp-pulse 3.2s ease-in-out infinite; pointer-events: none; z-index: 3;
+}
+.beam__ray {
+  position: absolute; z-index: 2; left: 0; top: 0; width: 1700px; height: 900px; margin-top: -450px;
+  transform-origin: 0 50%; transform: rotate(6deg); pointer-events: none;
+  /* a soft wedge of light (conic gradient = no hard edges) that fades with distance */
+  background: conic-gradient(from 70deg at 0% 50%, rgba(255, 240, 196, 0) 0deg, rgba(255, 240, 196, 0.22) 6deg, rgba(255, 244, 205, 0.86) 15deg, rgba(255, 240, 196, 0.22) 24deg, rgba(255, 240, 196, 0) 30deg, rgba(255, 240, 196, 0) 360deg);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.55) 30%, rgba(0, 0, 0, 0.18) 62%, transparent 92%);
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.55) 30%, rgba(0, 0, 0, 0.18) 62%, transparent 92%);
+  mix-blend-mode: screen; will-change: transform;
+}
+@keyframes lamp-pulse { 0%, 100% { opacity: 0.7; transform: scale(0.9); } 50% { opacity: 1; transform: scale(1.25); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .beam__lamp { animation: none; }
+}
