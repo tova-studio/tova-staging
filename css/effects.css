@@ -14,13 +14,6 @@
 .cta-sand .cta-photo__inner { z-index: 1; }
 .cta-sand .cta-card { background: rgba(251, 248, 242, 0.92); }
 
-/* ---------- A light layer of gold dust over the whole page (decoration only, never blocks a click) ---------- */
-.page-sand { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 40; pointer-events: none; }
-
-/* ---------- Home banner: gold dust around the main picture ---------- */
-.hero-sand { position: relative; isolation: isolate; padding-bottom: 56px; }
-.hero-sand .hero-sand__canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; }
-
 /* ---------- Lighthouse beam (the "Our name" section) ---------- */
 .beam-scene {
   position: relative; overflow: hidden; isolation: isolate;
