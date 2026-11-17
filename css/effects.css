@@ -57,3 +57,10 @@
 .cta-circle:hover .cta-circle__dot, .cta-circle:focus-visible .cta-circle__dot { transform: scale(1.07); background: #E2BE6C; }
 .cta-circle:hover .cta-circle__dot svg, .cta-circle:focus-visible .cta-circle__dot svg { transform: translateX(3px); }
 .cta-circle:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; border-radius: 40px; }
+
+/* Lighthouse lamp: a small glint of sun on the glass (no beam, it is daytime). */
+.beam__lamp { width: 26px; height: 26px; margin: -13px 0 0 -13px;
+  background: radial-gradient(circle, rgba(255, 252, 240, 0.95) 0%, rgba(255, 244, 208, 0.55) 34%, rgba(255, 240, 196, 0) 70%); animation-duration: 4.2s; }
+.beam__lamp::before, .beam__lamp::after { content: ""; position: absolute; left: 50%; top: 50%; pointer-events: none; }
+.beam__lamp::before { width: 54px; height: 1px; margin: -0.5px 0 0 -27px; background: linear-gradient(90deg, transparent, rgba(255, 252, 240, 0.9), transparent); }
+.beam__lamp::after { width: 1px; height: 54px; margin: -27px 0 0 -0.5px; background: linear-gradient(180deg, transparent, rgba(255, 252, 240, 0.9), transparent); }
