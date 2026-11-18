@@ -5,6 +5,7 @@
    3. Gentle reveal on scroll
    4. Case study filters
    5. Contact form (Formspree)
+   6. Articles list: default picture, and nine at a time
    ========================================================================== */
 
 (function () {
@@ -150,6 +151,64 @@
         form.hidden = false;
         var first = form.querySelector('#c-name');
         if (first) first.focus();
+      });
+    }
+  }
+
+  /* 6. Articles list ------------------------------------------------------
+     Every card gets a picture: one without its own (or whose picture fails
+     to load) shows the default, and a picture with no alt text gets one.
+     Cards show nine at a time; "See more" shows the next nine. */
+  var DEFAULT_IMAGE = 'images/desk-coffee.jpg';
+  var DEFAULT_ALT = 'A cup of coffee, reading glasses and a laptop on a sunlit desk';
+  var list = document.querySelector('[data-articles]');
+
+  if (list) {
+    var articles = Array.prototype.slice.call(list.querySelectorAll('.article-card'));
+
+    articles.forEach(function (card) {
+      var link = card.querySelector('.article-card__title a');
+      var media = card.querySelector('.article-card__media');
+      if (!media) {
+        media = document.createElement('a');
+        media.className = 'article-card__media';
+        media.href = link ? link.getAttribute('href') : '#';
+        media.tabIndex = -1;
+        media.setAttribute('aria-hidden', 'true');
+        card.insertBefore(media, card.firstChild);
+      }
+      var img = media.querySelector('img');
+      if (!img) { img = document.createElement('img'); img.loading = 'lazy'; media.appendChild(img); }
+      var useDefault = function () { img.onerror = null; img.src = DEFAULT_IMAGE; img.alt = DEFAULT_ALT; };
+      if (!(img.getAttribute('src') || '').trim()) useDefault();
+      else img.onerror = useDefault;
+      if (!(img.getAttribute('alt') || '').trim()) {
+        img.alt = img.getAttribute('src') === DEFAULT_IMAGE ? DEFAULT_ALT : (link ? link.textContent.trim() : DEFAULT_ALT);
+      }
+    });
+
+    var PAGE = 9;
+    var shownCount = 0;
+    var moreBox = document.querySelector('.articles-more');
+    var moreButton = document.querySelector('[data-articles-more]');
+
+    var showMore = function () {
+      shownCount = Math.min(articles.length, shownCount + PAGE);
+      articles.forEach(function (card, i) {
+        var wasHidden = card.hidden;
+        card.hidden = i >= shownCount;
+        if (wasHidden && !card.hidden) card.classList.add('is-visible');
+      });
+      if (moreBox) moreBox.hidden = shownCount >= articles.length;
+    };
+
+    showMore();
+    if (moreButton) {
+      moreButton.addEventListener('click', function () {
+        var first = shownCount;
+        showMore();
+        var next = articles[first] && articles[first].querySelector('.article-card__title a');
+        if (next) next.focus();
       });
     }
   }
