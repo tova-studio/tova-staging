@@ -6,3 +6,4 @@
 - articles/website-cost-nz.jpg: photo by Cht Gsml on Unsplash (https://unsplash.com/photos/QfQW294I8sQ), Unsplash License (free, commercial use, no attribution required).
 - articles/show-up-google-christchurch.jpg: photo by Tamas Tuzes-Katai on Unsplash (https://unsplash.com/photos/rEn-AdBr3Ig), Unsplash License (free, commercial use, no attribution required).
 - articles/ai-search-visibility.jpg: photo by Aerps.com on Unsplash (https://unsplash.com/photos/5e4Zlblkvks), Unsplash License (free, commercial use, no attribution required).
+- articles/website-hurting-business.jpg: photo by konkapo on Pixabay (https://pixabay.com/photos/home-office-laptop-natural-light-10207248/), Pixabay Content License (free, commercial use, no attribution required).
