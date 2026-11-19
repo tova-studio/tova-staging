@@ -2,17 +2,8 @@
    Tova Digital — site styles
    ========================================================================== */
 
-/* Safira March is a licensed font. Put your web-licensed files in /fonts
-   with these names and they'll load automatically. Until then, Italiana
-   (Google Fonts) is used as a stand-in. */
-@font-face {
-  font-family: "Safira March";
-  src: url("../fonts/SafiraMarch.woff2") format("woff2"),
-       url("../fonts/SafiraMarch.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/* Safira March is a licensed font and its files are not on the site yet,
+   so Italiana (Google Fonts) is used instead. */
 
 :root {
   --cream: #FBF8F2;
