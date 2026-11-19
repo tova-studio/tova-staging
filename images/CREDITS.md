@@ -8,3 +8,4 @@
 - articles/ai-search-visibility.jpg: photo by Aerps.com on Unsplash (https://unsplash.com/photos/5e4Zlblkvks), Unsplash License (free, commercial use, no attribution required).
 - articles/website-hurting-business.jpg: photo by konkapo on Pixabay (https://pixabay.com/photos/home-office-laptop-natural-light-10207248/), Pixabay Content License (free, commercial use, no attribution required).
 - articles/website-timeline-nz.jpg: photo by sakibmia24 on Pixabay (https://pixabay.com/photos/computer-notebook-desk-10503571/), Pixabay Content License (free, commercial use, no attribution required).
+- articles/website-redesign-checklist.jpg: photo by Firmbee on Pixabay (https://pixabay.com/photos/office-notes-notepad-entrepreneur-620817/), Pixabay Content License (free, commercial use, no attribution required).
