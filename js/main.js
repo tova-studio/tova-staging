@@ -134,6 +134,9 @@
         .then(function (res) {
           if (!res.ok) throw new Error('Request failed');
           form.reset();
+          // Tell Tag Manager a real enquiry was sent (Google Analytics key event)
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'generate_lead' });
           showSuccess();
         })
         .catch(function () {
