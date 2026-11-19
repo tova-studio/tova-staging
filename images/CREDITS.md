@@ -5,3 +5,4 @@
 - articles/choosing-web-designer-christchurch.jpg: photo by Compagnons on Unsplash (https://unsplash.com/photos/4UGmm3WRUoQ), Unsplash License (free, commercial use, no attribution required).
 - articles/website-cost-nz.jpg: photo by Cht Gsml on Unsplash (https://unsplash.com/photos/QfQW294I8sQ), Unsplash License (free, commercial use, no attribution required).
 - articles/show-up-google-christchurch.jpg: photo by Tamas Tuzes-Katai on Unsplash (https://unsplash.com/photos/rEn-AdBr3Ig), Unsplash License (free, commercial use, no attribution required).
+- articles/ai-search-visibility.jpg: photo by Aerps.com on Unsplash (https://unsplash.com/photos/5e4Zlblkvks), Unsplash License (free, commercial use, no attribution required).
