@@ -4,7 +4,7 @@
    2. Footer year
    3. Gentle reveal on scroll
    4. Case study filters
-   5. Contact form (Formspree)
+   5. Contact form (FormSubmit)
    6. Articles list: default picture, and nine at a time
    ========================================================================== */
 
@@ -91,8 +91,9 @@
   }
 
   /* 5. Contact form ------------------------------------------------------
-     The form posts to Formspree (free plan available). Create a form at
-     formspree.io, then replace YOUR_FORM_ID in contact.html's form action.
+     The form posts to FormSubmit (free, no account): formsubmit.co/ajax/<inbox>
+     in contact.html's form action. The first enquiry sends an activation email
+     to that inbox; after it is clicked, every enquiry arrives by email.
      Until you do, the form shows the thank-you message without sending. */
   var form = document.querySelector('[data-contact-form]');
   var success = document.querySelector('[data-form-success]');
@@ -111,7 +112,7 @@
       if (errorBox) errorBox.hidden = true;
 
       // Spam trap: real people never fill this hidden field
-      var trap = form.querySelector('input[name="_gotcha"]');
+      var trap = form.querySelector('input[name="_honey"], input[name="_gotcha"]');
       if (trap && trap.value) { showSuccess(); return; }
 
       var action = form.getAttribute('action') || '';
@@ -133,6 +134,10 @@
       })
         .then(function (res) {
           if (!res.ok) throw new Error('Request failed');
+          return res.json().catch(function () { return {}; });
+        })
+        .then(function (j) {
+          if (j && (j.success === false || j.success === 'false')) throw new Error('Not sent');
           form.reset();
           // Tell Tag Manager a real enquiry was sent (Google Analytics key event)
           window.dataLayer = window.dataLayer || [];

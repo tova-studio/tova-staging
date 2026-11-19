@@ -85,8 +85,10 @@
       </div>
 
       <div class="form-panel">
-        <!-- Replace YOUR_FORM_ID with the ID from your Formspree form (see README). -->
-        <form class="form" data-contact-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <!-- Sent by FormSubmit (free, no account) to the enquiries inbox. See README. -->
+        <form class="form" data-contact-form action="https://formsubmit.co/ajax/enquiries@tovadigital.co.nz" method="POST">
+          <input type="hidden" name="_subject" value="New enquiry from tovadigital.co.nz">
+          <input type="hidden" name="_template" value="table">
           <h2 class="h3" style="font-size: 36px">Start a project</h2>
 
           <div class="grid">
@@ -148,7 +150,7 @@
 
           <div class="hp" aria-hidden="true">
             <label for="c-gotcha">Leave this field empty</label>
-            <input id="c-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+            <input id="c-gotcha" type="text" name="_honey" tabindex="-1" autocomplete="off">
           </div>
 
           <p class="form-error" data-form-error role="alert" hidden>Sorry, something went wrong sending your message. Please try again, or email us at enquiries@tovadigital.co.nz.</p>
@@ -228,6 +230,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261119" defer></script>
+  <script src="js/main.js?v=20261119b" defer></script>
 </body>
 </html>

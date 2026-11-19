@@ -48,13 +48,12 @@ Then connect your domain (e.g. `tovadigital.co.nz`) in your host's domain settin
 
 ## Make the contact form send emails
 
-Static sites can't send email by themselves, so the form uses **Formspree** (free plan available):
+Static sites can't send email by themselves, so the form uses **FormSubmit** (free, unlimited, no account):
 
-1. Sign up at formspree.io and create a new form.
-2. Copy its ID: the part after `/f/` in the endpoint, e.g. `xyzabcd`.
-3. In `contact.html`, replace `YOUR_FORM_ID` in `action="https://formspree.io/f/YOUR_FORM_ID"`.
-
-Until you do this, submitting shows the thank-you message but nothing is sent.
+- The form's `action` in `contact.html` is `https://formsubmit.co/ajax/enquiries@tovadigital.co.nz`.
+- The very first enquiry makes FormSubmit email that inbox an activation link. Click it once; after that every enquiry arrives by email (as a table, subject "New enquiry from tovadigital.co.nz").
+- To hide the address from bots, FormSubmit's activation email offers a random alias: put it in place of the email in the `action`.
+- Spam trap: the hidden `_honey` field. A real send also tells Tag Manager `generate_lead` (an Analytics key event).
 
 ## Things to update before launch
 
