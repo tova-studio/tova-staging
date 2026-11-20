@@ -9,3 +9,4 @@
 - articles/website-hurting-business.jpg: photo by konkapo on Pixabay (https://pixabay.com/photos/home-office-laptop-natural-light-10207248/), Pixabay Content License (free, commercial use, no attribution required).
 - articles/website-timeline-nz.jpg: photo by sakibmia24 on Pixabay (https://pixabay.com/photos/computer-notebook-desk-10503571/), Pixabay Content License (free, commercial use, no attribution required).
 - articles/website-redesign-checklist.jpg: photo by Firmbee on Pixabay (https://pixabay.com/photos/office-notes-notepad-entrepreneur-620817/), Pixabay Content License (free, commercial use, no attribution required).
+- articles/website-on-mobile.jpg: photo by Pexels on Pixabay (https://pixabay.com/photos/hands-phone-smartphone-electronics-1851218/), Pixabay Content License (free, commercial use, no attribution required).
