@@ -220,4 +220,21 @@
       });
     }
   }
+
+  /* 7. Case study pictures: fade between the views of each site ------- */
+  if (!reduceMotion) {
+    document.querySelectorAll('[data-slides]').forEach(function (set, n) {
+      var imgs = set.querySelectorAll('img');
+      if (imgs.length < 2) return;
+      var i = 0;
+      setTimeout(function () {
+        setInterval(function () {
+          if (document.hidden) return;
+          imgs[i].classList.remove('is-on');
+          i = (i + 1) % imgs.length;
+          imgs[i].classList.add('is-on');
+        }, 5000);
+      }, n * 1500);
+    });
+  }
 })();
