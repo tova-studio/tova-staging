@@ -14,3 +14,4 @@
 - articles/homepage-content.jpg: photo by Pexels on Pixabay (https://pixabay.com/photos/plans-design-web-design-designer-1867745/), Pixabay Content License (free, commercial use, no attribution required).
 - articles/small-business-blog.jpg: photo by StartupStockPhotos on Pixabay (https://pixabay.com/photos/office-startup-business-home-office-594132/), Pixabay Content License (free, commercial use, no attribution required).
 - articles/website-maintenance-nz.jpg: photo by StartupStockPhotos on Pixabay (https://pixabay.com/photos/desk-laptop-notebook-pen-workspace-593327/), Pixabay Content License (free, commercial use, no attribution required).
+- articles/website-security-check.jpg: photo by Tumisu on Pixabay (https://pixabay.com/photos/safety-encryption-ssl-world-2890768/), Pixabay Content License (free, commercial use, no attribution required).
