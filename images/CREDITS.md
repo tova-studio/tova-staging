@@ -16,3 +16,4 @@
 - articles/website-maintenance-nz.jpg: photo by StartupStockPhotos on Pixabay (https://pixabay.com/photos/desk-laptop-notebook-pen-workspace-593327/), Pixabay Content License (free, commercial use, no attribution required).
 - articles/website-security-check.jpg: photo by Tumisu on Pixabay (https://pixabay.com/photos/safety-encryption-ssl-world-2890768/), Pixabay Content License (free, commercial use, no attribution required).
 - articles/update-own-website.jpg: photo by Innovalabs on Pixabay (https://pixabay.com/photos/software-development-developer-6523979/), Pixabay Content License (free, commercial use, no attribution required).
+- articles/static-vs-cms-website.jpg: photo by Lalmch on Pixabay (https://pixabay.com/photos/computer-macbook-tablet-editing-767781/), Pixabay Content License (free, commercial use, no attribution required).
